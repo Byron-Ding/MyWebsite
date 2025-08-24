@@ -1,0 +1,143 @@
+/* 主体信息声明站百分之80 */
+.page-foot-main-div{
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100px;
+    width: 100%;
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url('../img/svg/GreenGrassGround.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.page-foot-information{
+    position: relative;
+    display: flex;
+    /* 介绍 */
+    height: 60%;
+    /* 默认12号字体 */
+    font-size: 12px;
+    /* 占的空间 */
+    width: 70%; /* 影响下面 left 居中 */
+    /* 文字居中 */
+    /* 水平 */
+    top: 20%;
+    left: 15%;
+    /* 控制文字 */
+    text-align: center;
+    align-items: center;
+    /* 控制div */
+    justify-content: center;
+    /* 最大百分之40 */
+    max-height: 50%;
+    /* 超出滚轮 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+}
+
+.page-foot-information-paragraph{
+    margin: 0%; 
+    /* 必须要加这个，不然p自己就是不全的，即使有父元素的滚轮也无法显示全部内容 */
+    width: 100%;
+    height: 100%;
+    /* 可视化边界 */
+    /* outline: 1px solid red; 可视化边界 */
+    
+}
+
+
+.page-foot-license-svg{
+    /* 上下两行 */
+    display: grid;
+    /* 宽度控制高度 */
+    /* 无法继承，会导致子元素溢出 */
+    height: auto; 
+    width: 10%;
+    /* 限高限宽 */
+    max-width: 63px;    /* 30 + 3间隔 + 30 */
+    max-height: 42.56px;
+    min-width: 33px;
+    min-height: 21.28px;
+    /* 整体居右 */
+    position: absolute;
+    right: 3%;
+    /* 距离底部 */
+    bottom: 10%;
+    /* 内部居中 */
+    align-items: center;
+    justify-content: center;
+	/* flex: 1; */
+    /* 一列，必须要写，不然就是0x0 */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* 内部行间距，列间距 */
+    row-gap: 3%;
+    column-gap: 0px;    
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+
+    
+}
+
+.page-foot-license-svg img {
+    /* img display 默认为 inline-block inline-block 有上下间隔 */
+    display: block;
+    /* img 必须要单独设置，不然就是没有高度，会从父容器溢出 */
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+#AGPL-license-svg {
+    /* 总格子div，内部的95%div居中  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 占满整个外部格子，这个本身就是格子 */
+    height: 100%;
+    width: 100%;
+    /* 虽然只有一行，但是仍然设定无行列间距，保险 */
+    row-gap: 0px;
+    column-gap: 0px;
+    /* 225 : 76 约等于 */ 
+    aspect-ratio: 25 / 8; /* 63px : 42px 比例 */
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+}
+
+#cc-by-share-sa {
+    /* 三个子图标 */
+    display: grid;
+    /* 三等分 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 行列间距 */
+    row-gap: 0px;
+    column-gap: 10%;
+    /* 宽高 */ 
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+}
+
+#AGPL-icon {
+    /* 弥补上下两个图标的视觉差距， AGPL3 窄一点 */
+    width: 97%;
+    /* 可视化边界 */
+    /* outline: 1px solid red; */
+    height: 100%;
+    max-height: 100%;
+}
+
+.cc-icon{
+    /* 每个CC图标占满当前格子 */
+    max-width: 100%;
+     /* 可视化边界 */
+    /* outline: 1px solid red; */
+}

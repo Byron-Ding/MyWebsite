@@ -1,0 +1,149 @@
+{% extends "templates/main_template_with_bless/main_template_with_bless.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block area_bellow_bless %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ introduction_page__title }}</title>
+        <link rel="stylesheet" href="{% static 'templates/html/introduction_page.css' %}">
+    </head>
+    <body>
+        <!-- 不用表格边框，可维护性差 -->
+        <!-- 一定要加 m-0 p-0 要不然会被削掉 -->
+        <!-- 只要布局，不要间隔 -->
+        <div class="introduction-area">
+            <div class="introduction-area-brief">
+                <!-- 绝对不可以用bootstrap，bootstrap优先级比自定义css等级还要高，会导致padding和margin紊乱， -->
+                
+                <div class="my-links" max-column="2">
+                    <ul>
+                        <li>
+                            <div class="each-grid">
+                                <div id="github-link" class="each-label">
+                                    <a href="https://github.com/Byron-Ding" target="_blank"">
+                                        <img
+                                            alt="Zedong's Github Link"
+                                            src="{% static 'information_tag/img/svg/my_github.svg' %}"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="each-grid">
+                                <div id="email-link" class="each-label">
+                                    <a href="mailto:zedong@connect.hku.hk" target="_blank"">
+                                        <img
+                                            alt="Zedong's Email: zedong@connect.hku.hk"
+                                            src="{% static 'information_tag/img/svg/my_email.svg' %}"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="introduction-area-main">
+                <span>
+                    About Me:
+                </span>
+                <ol>
+                    <li>
+                        <span>
+                            I am currently a computer-related major, and cross-subject student working hard for a master's degree in Hong Kong.
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            I want to be an engineer, a scientist, a researcher, a person who is good at cross-disciplinary collaboration.
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            I hope I can make some contributions to the society and help others.
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            I hope my negligible efforts can make a difference to the world 😄.
+                        </span>
+                    </li>
+                </ol>
+                <p>
+                    This is a Brief introduction of my personality:
+                </p>
+                <span id="" class="small-list-title">
+                    Things I like :D
+                </span>
+                <ul id="intrest-list" class="small-list">
+                    <li>
+                        Any New knowledges. (Not only computer is also good!)
+                    </li>
+                    <li>
+                        Sports Like Badminton or Football.
+                    </li>
+                    <li>
+                        Some games, no matter board games or computer games.
+                    </li>
+                    <li>
+                        Computer Technology.
+                    </li>
+                    <li>
+                        Delicious Foods.
+                    </li>
+                </ul>
+                
+                <p class="normal-text">
+                    I am also pation and prefering in any cross-subject knowledges.
+                    As a people doing computer jobs, you need to know other subjects' data, then coorperating with others.
+                    That is also what have said by the scientists work in the government (Internet Plus).
+                </p>
+                
+                <p class="normal-text">
+                    Another thing is that: Freinds are good! I like friends. Human is group animal. No one can closure himself/herself for a long time.
+                    This is not good for pressure release and socialization.
+                </p>
+                
+                <p class="normal-text">
+                    I also try to support and participate in open source and free projects.
+                </p>
+                
+                
+                <span id="" class="small-list-title">
+                    Anything I don't touch according to my psychological research experience and psychological lectures taken (if this is important for you):
+                </span>
+                <ul id="avoid-list" class="small-list">
+                    <li>
+                        <span>
+                            Anything addictive (directly or over- stimulate neuro acceptors|damage neuro cycle).
+                        </span>
+                        <ul class="small-list-2">
+                            <li>Alcohol</li>
+                            <li>Cigrates</li>
+                            <li>18+ stuffs (supernormal stimulus|sex)</li>
+                            <span style="text-decoration: underline;">
+                            Ego is important in psychology. It is a core cognitive for people recognizing the world and themselves. Be Materialism is important.
+                            </span>
+                            <li>Unhealthy fans groups like crazy following the celebrities or imagine they are their OCs (Delusional Disorder).</li>
+                            <li>ACG exposed imgs (supernormal stimulus|sex + over-shaped body+ Neoteny (Over-cute/child like face/shape) + some people will self imagine he/she is his/her OC.)</li>
+                            <li>Furries (supernormal stimulus|sex + over-shaped body + over fluffy + Neoteny (Over-cute/child like face/shape) + some people will self imagine he/she is his/her OC[Clinical Lycanthropy].)</li>
+                            <li>etc.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        People with capitalism/slavery core.
+                    </li>
+                    <li>
+                        Greedy people, especially greedy for money.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

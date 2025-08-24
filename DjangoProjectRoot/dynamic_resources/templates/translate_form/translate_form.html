@@ -1,0 +1,79 @@
+{% load static %}
+{% load i18n %}
+{% load dict_utils %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% comment %} translate_form__language_translate_title 必须用引号包围，因为这不是变量，固定根据语言环境翻译 {% endcomment %}
+        <title>{% trans "translate_form__language_translate_title" %}</title>
+        <link rel="stylesheet" href="{% static 'templates/translate_form/translate_form.css' %}">
+        <script lang="javascript" type="module" src="{% static 'templates/translate_form/event_listener.js' %}"></script>
+    </head>
+    <body>        
+        <!-- 翻译组件 -->
+        <div id="language-drop-down-selector-main" class="language-drop-down-selector-main selector-main" data-open="false">
+            <div class="language-button-drop-down-outer-div">
+                <button type="button" class="language-button-drop-down selector-main-button" id="language-button-drop-down">
+                    <div class="language-button-inner-first-alphabet-div">
+                        🌐 
+                        {% comment %} <!-- {{ each-language.flag }} --> {% endcomment %}
+                    </div>
+                    <div class="language-button-inner-language-name-div">
+                        {% trans "translate_form__language_translate_title" %}
+                    </div>
+                </button>
+            </div>
+            <div class="language-button-options-position-specify-div">
+                <div class="language-button-options-div selector-options">
+                {# 这里是下拉选项的位置 #}
+                {% for each_language_option in translate_form.language_options_order %}
+                    {% include 'templates/translate_form/each_language_button.html' with each_language_option=translate_form.language_options|get_dict_value:each_language_option %}
+                {% endfor %}
+                {% comment %}
+                    例： 
+                {% endcomment %}
+                {% comment %}
+                    <div class="language-button-outer-div">
+                        <button class="language-button" type="submit" name="lang" value="{{ each-language.language-code }}">
+                            <div class="language-button-inner-first-alphabet-letter-div">
+                                文
+                                <!-- {{ each-language.flag }} -->
+                            </div>
+                            <div class="language-button-inner-language-name-div">
+                                中国
+                                <!-- {{ each-language.language-name }} -->
+                            </div>
+                        </button>
+                    </div>
+                    <div class="language-button-outer-div">
+                        <button class="language-button" type="submit" name="lang" value="{{ each-language.language-code }}">
+                            <div class="language-button-inner-first-alphabet-letter-div">
+                                A
+                                <!-- {{ each-language.flag }} -->
+                            </div>
+                            <div class="language-button-inner-language-name-div">
+                                中国
+                                <!-- {{ each-language.language-name }} -->
+                            </div>
+                        </button>
+                    </div>
+                {% endcomment %}
+                </div>
+            </div>
+        </div>
+        <script>
+            // 总选择框
+            const drop_down_selects = document.getElementById("language-drop-down-selector-main");
+            
+            // 按钮
+            const drop_down_toggle = drop_down_selects.querySelector("#language-button-drop-down");
+
+            // 点击时
+            // data 属性修改 
+            drop_down_toggle.addEventListener("click", () => {     
+                drop_down_selects.dataset.open = drop_down_selects.dataset.open === "true" ? "false" : "true";
+            });
+        </script>
+    </body>
+</html>

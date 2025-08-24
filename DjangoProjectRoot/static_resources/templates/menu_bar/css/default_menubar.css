@@ -1,0 +1,97 @@
+
+body {
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.header-menu-bar-inner {
+	filter: contrast(1px);
+}
+
+.header-menu-bar-main {
+	position: relative;
+	/* background: linear-gradient(#4682b4, 25%, skyblue); /* skyblue #87ceeb */ */
+	color: white;
+	padding: 6px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+.string-separator{
+	position: absolute;
+	display: block;
+	height: 100px;
+	top: 0px;
+	background-color: whitesmoke;
+	border-radius: 0px, 0px, 4px, 4px;
+	z-index: 2;
+}
+
+.header-menu-bar-decorate {
+	position: relative;
+	z-index: auto;
+}
+
+.header-menu-bar-decorate-water{
+	position: absolute;
+	background-color: white;
+	width: 12px;
+	height: 12px;
+	border-radius: 6px 10px;
+	filter: blur(2px);
+	
+}
+
+.header-menu-bar-decorate-waterroof{
+	position: absolute;
+	height: 8px;
+	background-color: white;
+	top: -4px;
+	left: -5%;
+	width: 105%;
+	overflow: hidden;
+	filter: blur(2px);
+}
+
+.header-menu-bar-item-separator{
+	position: relative;
+	top: 0px;
+	padding: 8px;
+}
+
+
+.string-separator{
+	top: -25px;
+}
+
+#header-menu-bar-decorate-warterdrop1 {
+	top: 2px;
+	left: -8px;
+}
+
+#header-menu-bar-decorate-warterdrop2 {
+	left: -4px;
+	top: -4px;
+}
+
+#header-menu-bar-decorate-warterdrop3 {
+	left: -11px;
+	top: 8px;
+}
+
+#header-menu-bar-decorate-warterdrop4 {
+	left: 2px;
+	top: -8px;
+}
+
+
+.header-menu-bar-middle-fill-div {
+	/* flex 意思： */
+	flex: 1;
+}

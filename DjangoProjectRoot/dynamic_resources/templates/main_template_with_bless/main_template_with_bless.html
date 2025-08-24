@@ -1,0 +1,40 @@
+{% extends "templates/main_template_header_footer/main_template_header_footer.html" %}
+{% load static %}
+{% load i18n %}
+{% block main_content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ introduction_page__title }}</title>
+        <link rel="stylesheet" href="{% static 'templates/main_template_with_bless/css/main_template_with_bless.css' %}">
+    </head>
+    <body>
+        <div class="main-background-div">
+          <div class="main-flow">
+            <div class="main-bless">
+                <h6 class="text-highlisht-bless" >
+                    <!-- 单独一行 -->
+                    <div class="each-bless-line">
+                        Thanks for everybody helps me and loves me.
+                    </div>
+                    <div class="each-bless-line">
+                        Includes those in the bootom.
+                    </div>
+                    <div class="each-bless-line">
+                        Hope you go well and keep health.
+                    </div>
+                </h6>
+            </div>
+            <div class="bless-introduction-separator">
+                <hr />
+            </div>
+            {% block area_bellow_bless %}
+                area_bellow_bless_block
+            {% endblock area_bellow_bless %}
+          </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

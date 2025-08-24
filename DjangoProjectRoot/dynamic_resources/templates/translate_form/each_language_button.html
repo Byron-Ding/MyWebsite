@@ -1,0 +1,28 @@
+{# 这里是每个语言选项的按钮模板 #}
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ each_language_option.language_name }}</title>
+    </head>
+    <body>
+        <!-- 单个语言的按钮 -->
+        {% comment %} static 不支持使用变量名传递，必须要with绕开 {% endcomment %}
+        {% with language_flag_img_path=each_language_option.language_flag_img_path %}
+        <!-- svg 必须要有preserveAspectRatio="none" 才支持不等比拉伸 -->
+        <!-- svg width="1235" height="650" 不能有宽高属性 -->
+        <div class="language-button-outer-div" style="background-image: url('{% static language_flag_img_path %}');">
+        {% endwith %}
+            <button class="language-button" type="button" data-lang="{{ each_language_option.language_code }}">
+                <div class="language-button-inner-first-alphabet-letter-div">
+                    {{ each_language_option.first_alphabet_letter }}
+                </div>
+                <div class="language-button-inner-language-name-div">
+                    {{ each_language_option.language_flag_and_name }}
+                </div>
+            </button>
+        </div>
+    </body>
+</html>

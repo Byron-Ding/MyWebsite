@@ -1,0 +1,9 @@
+
+.header-menu-bar-item {
+	display: inline-block;
+	position: flex;
+	height: 24px;
+	font-size: 18px;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+{% load dict_utils %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>真实滴落水滴标题栏</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="{% static 'templates/menu_bar/css/default_menubar.css' %}">
+  <link rel="stylesheet" href="{% static 'templates/menu_bar/menu_items/css/menu_items.css' %}" />
+</head>
+<body>
+  <header class="header-menu-bar-outer" id="header-menu-bar-outer">
+    <div class="header-menu-bar-inner" id="header-menu-bar-inner">
+		<!-- 内容显示 -->
+		<!-- 此处应该为模板替换 -->
+		<div class="header-menu-bar-main" id="header-menu-bar-main">
+			{% for menu_item_index in default_menubar.menu_items.menu_items_order %}
+			<!-- menu_item 是一个对象 -->
+				{% include 'templates/menu_bar/menu_items/menu_item.html' with menu_item=default_menubar.menu_items.menu_items|get_dict_value:menu_item_index %}
+				{% if not forloop.last %}
+					{% include 'templates/menu_bar/menu_separator/menu_separator.html' %}
+				{% endif %}
+			{% endfor %}
+			<!-- 中间的填充用div -->
+			<div class="header-menu-bar-middle-fill-div">
+			</div>
+			<!-- 最右边是翻译下拉菜单 -->
+			<div class="header-menu-bar-translate-dropdown">
+				{% include 'templates/translate_form/translate_form.html' with translate_form=default_menubar.translate_form %}
+			</div>
+		</div>
+		<!-- 水滴装饰 -->
+		<div class="header-menu-bar-decorate">
+			<!-- 水滴层 -->
+			<div class="header-menu-bar-decorate-waterroof">
+			</div>
+			<!-- 边缘滑落的水滴 -->
+			<div class="header-menu-bar-decorate-water" id="header-menu-bar-decorate-warterdrop1">
+			</div>
+			<div class="header-menu-bar-decorate-water" id="header-menu-bar-decorate-warterdrop2">
+			</div>
+			<div class="header-menu-bar-decorate-water" id="header-menu-bar-decorate-warterdrop3">
+			</div>
+			<div class="header-menu-bar-decorate-water" id="header-menu-bar-decorate-warterdrop4">
+			</div>
+		</div>
+	</div>
+  </header>
+</body>
+</html>

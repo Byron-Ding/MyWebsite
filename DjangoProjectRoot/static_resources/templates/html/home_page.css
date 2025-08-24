@@ -1,0 +1,46 @@
+
+html, body {
+    height: 100%;
+}
+body{
+    display: grid;
+    /* 标题栏内部是 32px */
+    /* 内部的 .page-foot-main-div 是 height: 100px; */
+    grid-template-rows: 32px auto 100px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, skyblue 0%, white 20%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header {
+    top: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    /* 管字体 */
+    text-align: left;
+    /* 管元素 */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer 置底 */
+footer {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    width: 100%;
+    height: 100%;
+}
+
+.main-background-div{
+    height: auto;
+}

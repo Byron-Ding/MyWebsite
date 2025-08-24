@@ -1,0 +1,21 @@
+{
+    "menu_items_order": [
+        "home_page",
+        "introduction_page",
+        "thanks_page"
+    ],
+    "menu_items": {
+        "home_page": {
+            "page_name": "menu_bar_item_text__home_page",
+            "page_link": "home_page_app:home_page"
+        },
+        "introduction_page": {
+            "page_name": "menu_bar_item_text__introduction_page",
+            "page_link": "introduction_page_app:introduction_page"
+        },
+        "thanks_page": {
+            "page_name": "menu_bar_item_text__thanks_page",
+            "page_link": "thanks_page_app:thanks_page"
+        }
+    }
+}

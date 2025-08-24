@@ -1,0 +1,17 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		{% comment %} <link rel="stylesheet" href="{% static 'templates/menu_bar/menu_items/css/menu_items.css' %}"> {% endcomment %}
+	</head>
+	<body>
+		<!-- 菜单项 -->
+		<div class="header-menu-bar-item">
+			<a href="{% url menu_item.page_link %}">{% trans menu_item.page_name %}</a>
+		</div>
+	</body>
+</html>

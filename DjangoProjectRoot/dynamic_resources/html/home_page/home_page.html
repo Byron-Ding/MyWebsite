@@ -1,0 +1,21 @@
+{% extends "templates/main_template_header_footer/main_template_header_footer.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block main_content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ home_page__title }}</title>
+        <link rel="stylesheet" href="{% static 'templates/html/home_page.css' %}">
+    </head>
+    <body>
+        <div class="main-background-div">
+            <div class="welcome-message ">
+                {% include "html/home_page/main_content.html" %}
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

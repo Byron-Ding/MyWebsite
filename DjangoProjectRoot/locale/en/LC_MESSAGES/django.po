@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-08-15 12:00+0800\n"
+"PO-Revision-Date: 2025-08-15 12:00+0800\n"
+"Last-Translator: Byron <byron@example.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+
+# Content for home_page
+msgid "menu_bar_item_text__home_page"
+msgstr "Home"
+
+# Content for introduction_page
+msgid "menu_bar_item_text__introduction_page"
+msgstr "Introduction"
+
+# Content for thanks_page
+msgid "menu_bar_item_text__thanks_page"
+msgstr "Thanks"
+
+# Language的语言切换栏按钮标题
+msgid "translate_form__language_translate_title"
+msgstr "Language/Language"
+
+# Content for home_page
+msgid "welcome-message-welcome-head-word"
+msgstr "Welcome"
+
+msgid "welcome-message-left-word"
+msgstr "to Byron's personal website. 😊"

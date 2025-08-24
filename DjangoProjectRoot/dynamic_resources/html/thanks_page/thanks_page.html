@@ -1,0 +1,165 @@
+{% extends "templates/main_template_with_bless/main_template_with_bless.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block area_bellow_bless %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ thanks_page__title }}</title>
+        <link rel="stylesheet" href="{% static 'templates/html/thanks_page.css' %}">
+    </head>
+    <body>
+        <!-- 不用表格边框，可维护性差 -->
+        <!-- 一定要加 m-0 p-0 要不然会被削掉 -->
+        <!-- 只要布局，不要间隔 -->
+        <div class="introduction-area">
+            <ul>
+                <li>
+                    Thanks to my family, my friends, and everybody helps me and loves me.
+                </li>
+                <li>
+                    <span>
+                        Project Dependency:
+                    </span>
+                    <ul>
+                        <li>
+                            Python
+                        </li>
+                        <li>
+                            Django
+                        </li>
+                        <li>
+                            HTML, CSS and a tiny JavaScript
+                        </li>
+                        <li>
+                            Sqlite carried by Django
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        Code Editor:
+                    </span>
+                    <ul>
+                        <li>
+                            Visual Studio Code
+                        </li>
+                        <li>
+                            HBuilder for Simple instant Render test
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr/>
+            <div class="q-and-a-session">
+                Why I choose Django+Python?
+                <ul>
+                    <li>
+                        Simple, powerful and effective.
+                    </li>
+                    <li>
+                        Python is a interpreted programming language.
+                        It is easy to learn, use and change.
+                    </li>
+                    <li>
+                        Although Python is dynamic typed language, it still has typing system. USE IT! Not IGNORE IT!
+                    </li>
+                    <li>
+                        <span>
+                            Separate Front and End seems to be a joke when doing REAL Engineering.
+                        </span>
+                        <ul>
+                            <li>
+                                Because a lot of data paraphrasing and transformation work needs to be done on the server side.
+                                Dynamic HTML generate and translate work need to be done also by the server side.
+                            </li>
+                            <li>
+                                JavaScript does not support typing system.
+                                Although there is a typing system in TypeScript, it is not as mature and flexible as Python's typing system.
+                                And the most important thing is that: TypeScript is a compiled language. It still need to transpile to JavaScript.
+                                The browser does not permit TypeScript running directly.
+                            </li>
+                            <li>
+                                Packing and Depacking things is doing the same thing twice.
+                                If there is a direct, specific, one-only communication channel.
+                                This is not ARP or IP/TCP, we do not need to add tags and organize data in extra layers.
+                                This also slows down the communication.
+                                It is like you know English and Chinese and communicate with a foreigner who only knows English.
+                                But you guys communicate through the third language like French.
+                            </li>
+                            <li style="text-decoration: underline;">
+                                Use template is already enough for module engineering.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                Why not Java/SpringBoot, Php or Ruby/Rails?
+                <ul>
+                    <li>
+                        Java is too much, and not truely flexible and opensource, which gives a bad community.
+                        Just like 5070 TI Graphic Card does not support Linux adjust the screen brightness in HP MAX.
+                        It is the driver problem! (Oracle and Nvidia F**k you!).
+                        Also, Java's packageing system is like C, which is very chaos.
+                    </li>
+                    <li>
+                        Php does not work well with other languages in some cases I think.
+                    </li>
+                    <li>
+                        Ruby does not have much package support.
+                    </li>
+                    <li>
+                        But I do like programming languages cooperate with each other.
+                        Like C for some flexible system, Python for quick development and code readability.
+                        In my Undergraduate final year Project, I do use Python for AI module,
+                        Rust for rough data cleaning (almost 1TB data, python is too slow),
+                        Shell for quick command serialization,
+                        and R for final data visualization and analysis.
+                        They work pretty well together.
+                        And another reason is library is not universal.
+                        Like Python does not have a very good visualization library, but R does.
+                    </li>
+                </ul>
+                Any future plans? Like build a blog here?
+                <ul>
+                    <li>
+                        <p>
+                            Actually not.
+                            Blog is a waste of time, we have other platform.
+                            These platform also support other people find your blogs.
+                            Nowadays, platform's ecosystem becomes more and more separate.
+                            Information are blocked in some cases.
+                            So share the information inside the cage is better than people breaks the cages and get the information from the outside.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Another important thing is that, maintain a complicated system costs a lot of time.
+                            I do not think it is worthy enough.
+                            This website is just a simple introduction of me.
+                            It is more like a map/tourist guide/Dish menu. When you want to see real pictures, go to the real place or order the food to have a try.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Finally, maintain a big system is not easy, especially with database.
+                        </p>
+                    </li>
+                </ul>
+                Complain:
+                <ul>
+                    <li>
+                        <p>
+                            Why imgs in rows cannot be displayed with same height but according to the minimum height?
+                            When you shrink window's width, the maximum width image shrinks, but the minimum width image does not shrink together to keep the same height to the maximum width image.
+                            In this case, images have a max-height, and the grid has a max-width.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

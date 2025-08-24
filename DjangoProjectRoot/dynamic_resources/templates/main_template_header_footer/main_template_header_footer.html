@@ -1,0 +1,30 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ home_page__title }}</title>
+		<link rel="stylesheet" href="{% static 'templates/menu_bar/menu_items/css/menu_items.css' %}">
+        <link rel="stylesheet" href="{% static 'templates/main_template_header_footer/css/main_template_header_footer.css' %}">
+    </head>
+    <body>
+        <header>
+            <!-- Menu Bar -->
+            <div class="header-menu-bar">
+                {% comment %} {{ default_menubar }} {% endcomment %}
+                {% include "templates/menu_bar/default_menubar.html" with default_menubar=default_menubar %}
+            </div>
+        </header>
+        <main>
+            <!-- Main Content -->
+            {% block main_content %}
+                Main content Block
+            {% endblock %}
+        </main>
+        <footer class="home-page-footer footer">
+            <!-- Page Footer -->
+            {% include "templates/page_foot/page_foot.html" %}
+        </footer>
+    </body>
+</html>

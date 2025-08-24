@@ -1,0 +1,56 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'templates/page_foot/css/page_foot.css' %}">
+    </head>
+    <body>
+        <div class="page-foot-main-div">
+            <div class="page-foot-information">
+                <p class="page-foot-information-paragraph">
+                    <a href="https://creativecommons.org">Personal Website</a> 
+                    🄯 CopyLeft 2025 by 
+                    <a href="https://creativecommons.org">Ding Zedong</a>
+                    is licensed under
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                        Creative Commons Attribution-ShareAlike 4.0 International
+                    </a>
+                </p>
+            </div>
+            <div class="page-foot-license-svg">
+                <div id="cc-by-share-sa">
+                    <div class="cc-icon">
+                        <img
+                            src="{% static 'license/cc.svg' %}"
+                            alt="cc"
+                        />
+                    </div>
+                    <div class="cc-icon">
+                        <img
+                            class="cc-by-share-icon"
+                            src="{% static 'license/by.svg' %}"
+                            alt="by"
+                        />
+                    </div>
+                    <div class="cc-icon">
+                        <img
+                            class="cc-by-share-icon"
+                            src="{% static 'license/sa.svg' %}"
+                            alt="sa"
+                        />
+                    </div>
+                </div>
+                <div id="AGPL-license-svg">
+                    <div id="AGPL-icon">
+                        <img src="{% static 'license/agpl-license-logos-by-christian-candena-cc-by.svg' %}"
+                         alt="AGPL License" 
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

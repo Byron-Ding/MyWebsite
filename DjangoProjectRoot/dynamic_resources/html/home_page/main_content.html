@@ -1,0 +1,23 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome Message</title>
+        <link rel="stylesheet" href="{% static 'templates/html/main_content.css' %}">
+    </head>
+    <body>
+        <h1>
+            <div class="welcome-message-welcome-head-word">
+                <span>
+                    {% trans "welcome-message-welcome-head-word" %}
+                </span>
+            </div>
+            <div class="welcome-message-left-word">
+                {% trans "welcome-message-left-word" %}
+            </div>
+        </h1>
+    </body>
+</html>

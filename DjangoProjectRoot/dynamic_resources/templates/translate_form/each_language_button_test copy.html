@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ each_language.language_name }}</title>
+        <style>
+            .language_button_outer_div{
+                position: relative;
+                background-image: url("../../../static_resources/templates/translate_form/imgs/flags/中国国旗_1024px.png");
+                background-size: 100% 100%;
+                width: 100px;
+                height: 20px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+            .language_button_outer_div::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(to right, rgba(256, 256, 256, 0.95), 75%, rgba(256, 256, 256, 0.5));
+              pointer-events: none;
+            }
+            .language_button{
+                display: flex;
+                align-items: center;
+                /* justify-content: center; */
+                border-width: 2px 0px 2px 0px;
+                border-color: transparent;
+                width: 100px;
+                height: 20px;
+                padding: 0;
+                margin: 0;
+                background-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 单个语言的按钮 -->
+        <div class="language_button_outer_div">
+            <button class="language_button" type="submit" name="lang" value="{{ each_language.language_code }}">
+                    <div class="language_button_inner_first_alphabet_div">
+                        中国
+                        <!-- {{ each_language.flag }} -->
+                    </div>
+                    <div class="language_button_inner_language_name_div">
+                        中国
+                        <!-- {{ each_language.language_name }} -->
+                    </div>
+            </button>
+        </div>
+    </body>
+</html>

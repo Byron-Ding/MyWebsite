@@ -1,0 +1,99 @@
+.language-button-drop-down-outer-div{
+    /* fixed */
+    background-image: url("../../../static_resources/templates/translate_form/imgs/svg/C919final.svg");
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+/* 总点击按钮 */
+.language-button-drop-down{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    /* 这几项是针对子元素文字的 */
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: skyblue;
+}
+.language-drop-down-selector-main{
+    display: grid;
+    width: 160px;
+    height: 20px;
+}
+/* 点击样式控制 */
+.language-drop-down-selector-main[data-open="true"] .language-button-options-div {
+    display: inline-block;
+}
+.language-button-options-position-specify-div{
+    position: relative;
+}
+/* 所有按钮的集合体 */
+.language-button-options-div{
+    display: none;
+    /* 这里的定位因为是相对上一级元素，而上一级元素的text-align center 继承了父元素，所以这里就歪掉了 */
+    /* 所以这里不可以绝对定位 */
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    border-color: skyblue;
+    border-style: dashed;
+    /* 边缘和内部合起来才是总宽高 */
+    border-width: 2px;
+    overflow: hidden;
+    width: 156px;
+    
+}
+/* 按钮背景 */
+.language-button-outer-div{
+    position: relative;
+    /* background-image: url("../../../static_resources/templates/translate_form/imgs/flags/中国国旗_1024px.png"); */
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-repeat: no-repeat;
+}
+/* 背景国旗图案遮罩 */
+.language-button-outer-div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(256, 256, 256, 0.95), 75%, rgba(256, 256, 256, 0.5));
+    pointer-events: none;
+}
+/* 语言选项按钮 */
+.language-button{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-color: transparent;
+    width: 160px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    z-index: 1;
+    /* 这几项是针对子元素文字的 */
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.language-button-inner-first-alphabet-letter-div{
+    width: 25%;
+    color: black;
+}
+.language-button-inner-language-name-div{
+    width: 75%;
+}

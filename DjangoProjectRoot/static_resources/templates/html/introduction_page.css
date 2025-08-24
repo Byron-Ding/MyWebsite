@@ -1,0 +1,140 @@
+hr {
+    margin: 12px;
+}
+
+
+.main-background-div {
+    height: 100%;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.main-flow {
+    display: grid;
+}
+
+.main-bless{
+    text-align: center;
+}
+
+
+.text-highlisht-bless {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0%;
+}
+
+.each-bless-line {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.introduction-area {
+    /* outline: 1px solid red; */
+    border-radius: 24px;
+    padding: 1rem 0.5rem;
+    box-shadow: 1px 1px 9px 2px #769ee1;
+    box-shadow: 1px;
+    display: flex;
+    /* 相当于bootstrap 4 + 8 = 12 */
+    grid-template-columns: 1fr 2fr;
+}
+
+.introduction-area-brief {
+    display: block;
+    /* 只有一列 */
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 25%;
+    height: auto;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.introduction-area-main {
+    text-align: left;
+    height: 100%;
+    width: 75%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    overflow-y: auto;
+}
+
+.----my-links-auto {
+    /* https://www.youtube.com/watch?v=CHULPvkXIRo */
+    /* --max-colums-number: attr(max-column type(<number>)); */
+    --max-colums-number: 2;
+    --min-column-size: 200px;
+    --grid-gap: 1rem;
+    /* 列宽，别碰 */
+    --grid-column-size: calc((100% - var(--grid-gap) * var(--max-colums-number)) / var(--max-colums-number));
+    /* 最小列宽 */
+    --grid-column-min-size: min(100%, max(var(--min-column-size), var(--grid-column-size)));
+    display: grid;
+    /* 子项水平居中 */
+    justify-items: center; 
+    gap: 0 var(--grid-gap);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            var(--grid-column-min-size),
+            1fr
+        )
+    );
+    width: 100%;
+    outline: 1px solid blue;
+}
+
+.my-links {
+    display: block;
+    padding: 0.5rem;
+}
+
+.each-grid{
+    width: 100%;
+    max-height: 20px;
+}
+
+.each-label {
+    display: block;
+    padding: 0;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    max-height: 20px;
+}
+
+/* Grid 消除视错觉 但ul不用 */
+#email-link {
+    /* padding: 1px; */
+}
+
+.my-links li {
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.each-label img {
+    display: block;
+    height: 100%;
+    max-height: 20px;
+    object-fit: contain;
+    /* outline: 1px solid red; */
+}
+
+.normal-text {
+    font-size: 12px;
+}
+
+.small-list-title {
+    font-size: 14px;
+}
+
+.small-list {
+    font-size: 12px;
+}
+
+.small-list-2 li {
+    font-size: 10px;
+}

@@ -1,0 +1,8 @@
+# Content for home_page
+msgid "menu_bar_item_text__home_page"
+msgstr ""
+
+# Content for thanks_page
+msgid "menu_bar_item_text__thanks_page"
+msgstr ""
+

@@ -1,0 +1,14 @@
+h1 {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+.welcome-message-welcome-head-word .welcome-message-left-word{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

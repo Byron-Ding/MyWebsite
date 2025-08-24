@@ -1,0 +1,30 @@
+hr {
+    margin: 12px;
+}
+
+
+.main-background-div {
+    height: 100%;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.main-flow {
+    display: grid;
+}
+
+.main-bless{
+    text-align: center;
+}
+
+
+.text-highlisht-bless {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0%;
+}
+
+.each-bless-line {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}

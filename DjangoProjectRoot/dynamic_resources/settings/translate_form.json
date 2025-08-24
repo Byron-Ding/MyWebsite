@@ -1,0 +1,31 @@
+{
+    "Main_comment": "support_languages",
+    "language_options_order": [
+        "zh-hans",
+        "en"
+    ],
+    "translate_form_titles": {
+        "zh-hans": {
+            "language_translate_title": "Language/语言"
+        },
+        "en": {
+            "language_translate_title": "Language/Language"
+        }
+    },
+    "language_options": {
+        "zh-hans": {
+            "language_code": "zh-hans",
+            "language_name": "简体中文",
+            "language_flag_img_path": "templates/translate_form/imgs/flags/中国国旗_1024px.png",
+            "first_alphabet_letter": "文",
+            "language_flag_and_name": "🇨🇳 简体中文"
+        },
+        "en": {
+            "language_code": "en",
+            "language_name": "English",
+            "language_flag_img_path": "templates/translate_form/imgs/flags/English_language.svg",
+            "first_alphabet_letter": "A",
+            "language_flag_and_name": "🇺🇸/🇬🇧 English"
+        }
+    }
+}
